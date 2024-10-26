@@ -6,6 +6,7 @@ int stringToNumber(const string& s);
 int opposite(int number);
 string numberToString(int num);
 string updateLight(string current);
+string reverseString(string str);
 
 #endif // !CODEWARS_H
 

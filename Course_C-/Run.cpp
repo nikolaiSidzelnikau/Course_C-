@@ -5,5 +5,5 @@ using namespace std;
 
 int main()
 {
-	cout << updateLight("red") << endl;
+	cout << reverseString("Hello") << endl;
 }

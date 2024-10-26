@@ -39,3 +39,16 @@ string updateLight(string current)
 		return "green";
 	}
 }
+
+string reverseString(string str)
+{
+	int sizeArray = (int)str.length();
+	char symbol = 0;
+	for (int i = 0; i < str.length() / 2; i++)
+	{
+		symbol = str[i];
+		str[i] = str[sizeArray - i - 1];
+		str[sizeArray - i - 1] = symbol;
+	}
+	return str;
+}
