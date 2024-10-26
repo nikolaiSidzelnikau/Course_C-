@@ -18,3 +18,8 @@ int opposite(int number)
 	}
 	return number;
 }
+
+string numberToString(int num)
+{
+	return to_string(num);
+}

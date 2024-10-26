@@ -6,6 +6,7 @@ using namespace std;
 
 int main()
 {
-	cout << opposite(-86) << endl;
+	string s = numberToString(45);
+	cout << s << endl;
 }
 

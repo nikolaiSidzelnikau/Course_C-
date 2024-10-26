@@ -4,6 +4,7 @@ using namespace std;
 
 int stringToNumber(const string& s);
 int opposite(int number);
+string numberToString(int num);
 
 #endif // !CODEWARS_H
 
