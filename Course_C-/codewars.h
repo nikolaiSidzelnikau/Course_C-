@@ -5,6 +5,7 @@ using namespace std;
 int stringToNumber(const string& s);
 int opposite(int number);
 string numberToString(int num);
+string updateLight(string current);
 
 #endif // !CODEWARS_H
 
