@@ -66,6 +66,34 @@ void calculator()
 	cout << a << " " << c << " " << b << " = " << result << endl;
 }
 
+//the falling of the ball
+
+double setHeightTower() {
+	double height = 0;
+	cout << "Enter the initial height of the tower in meters: ";
+	cin >> height;
+	cout << endl;
+	return height;
+}
+
+void getHeigtFallingBall()
+{
+	const double GRAVITY = 9.8;
+	const double HEIGHT_TOWER = setHeightTower();
+
+	double currentHeight = 0;
+	int second = 0;
+	while (currentHeight >= 0)
+	{
+		currentHeight = HEIGHT_TOWER - ((GRAVITY * second * second) / 2);
+		if (currentHeight > 0)
+		{
+			cout << second << " second : " << currentHeight << endl;
+			second++;
+		}
+	}
+}
+
 //data type in byte
 
 void dataTypeInByte()
