@@ -5,5 +5,5 @@ using namespace std;
 
 int main()
 {
-	cout << reverseString("Hello") << endl;
+	cout << evenOrOdd(-100) << endl;
 }

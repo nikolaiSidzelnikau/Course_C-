@@ -7,6 +7,7 @@ int opposite(int number);
 string numberToString(int num);
 string updateLight(string current);
 string reverseString(string str);
+string evenOrOdd(int number);
 
 #endif // !CODEWARS_H
 

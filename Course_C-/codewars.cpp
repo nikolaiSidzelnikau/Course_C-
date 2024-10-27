@@ -52,3 +52,9 @@ string reverseString(string str)
 	}
 	return str;
 }
+
+string evenOrOdd(int number)
+{
+
+	return number % 2 == 0 ? "Even" : "Odd";
+}
