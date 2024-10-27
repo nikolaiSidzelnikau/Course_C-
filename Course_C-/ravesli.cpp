@@ -1,7 +1,8 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
-//tasks 1
+//tasks 1 additions
 
 int readNumber()
 {
@@ -20,18 +21,63 @@ void writeAnswer(int num)
 	cout << num << endl;
 }
 
+//tasks 2 calculator : +, -, *, / 
+
+void calculator()
+{
+	double result = 0.0;
+	double a = 0.0;
+	double b = 0.0;
+	char c = 0;
+	cout << "Enter the correct mathematical operation " << endl;
+	cout << "example : 5.4 + 6 " << endl;
+	cin >> a;
+	cin >> c;
+	cin >> b;
+	cout << endl;
+	if (a && b != 0 || 0.0)
+	{
+		if (c == '+')
+		{
+			result = a + b;
+		}
+		else if (c == '-')
+		{
+			result = a - b;
+		}
+		else if (c == '*')
+		{
+			result = a * b;
+		}
+		else if (c == '/')
+		{
+			result = a / b;
+		}
+		else
+		{
+			cout << "Enter the correct mathematical operation";
+		}
+	}
+	else
+	{
+		cout << "Enter the correct number";
+	}
+	cout << setprecision(10) << endl;
+	cout << a << " " << c << " " << b << " = " << result << endl;
+}
+
 //data type in byte
 
 void dataTypeInByte()
 {
-	bool b = true;        
+	bool b = true;
 	char c = 'c';
 	short s = 2;
-	int i = 4;           
-	long l = 4;     
+	int i = 4;
+	long l = 4;
 	long long ll = 8;
-	float f = 4.0;       
-	double d = 8.0; 
+	float f = 4.0;
+	double d = 8.0;
 	long double ld = 8.0;
 
 	// 1 bytes 8 bit  range of values from  -128 to 127  unsigned from  0 to 255
