@@ -8,6 +8,7 @@ string numberToString(int num);
 string updateLight(string current);
 string reverseString(string str);
 string evenOrOdd(int number);
+string repeatStr(size_t repeat, const std::string& str);
 
 #endif // !CODEWARS_H
 

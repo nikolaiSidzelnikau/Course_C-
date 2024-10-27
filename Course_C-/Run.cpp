@@ -5,5 +5,5 @@ using namespace std;
 
 int main()
 {
-	cout << evenOrOdd(-100) << endl;
+	cout << repeatStr(4,"j") << endl;
 }

@@ -58,3 +58,13 @@ string evenOrOdd(int number)
 
 	return number % 2 == 0 ? "Even" : "Odd";
 }
+
+string repeatStr(size_t repeat, const string& str) {
+	string s;
+	while (repeat > 0)
+	{
+		s += str;
+		repeat--;
+	}
+	return s;
+}
