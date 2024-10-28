@@ -7,5 +7,6 @@ void dataTypeInByte();
 void calculator();
 double setHeightTower();
 void getHeigtFallingBall();
+void bits();
 
 #endif // !IO_H

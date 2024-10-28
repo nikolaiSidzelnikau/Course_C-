@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <math.h>
 using namespace std;
 
 //tasks 1 additions
@@ -92,6 +93,64 @@ void getHeigtFallingBall()
 			second++;
 		}
 	}
+}
+
+// bits
+
+void bits()
+{
+	// <<  >>
+
+	cout << " <<  >> " << endl;
+	int a = 2;
+	a = a << 4; // a == 32 = 2*2*2*2 
+	cout << a << endl;
+	a = a >> 4; // a == 2 = (((32 /2) /2) /2) /2 
+	cout << a << endl << endl;
+
+	// ~
+
+	cout << " ~ " << endl;
+	int b = 4;	// b ==			0000 0100
+	b = ~b;		// b == -5 ==	1111 1011 
+	b = b + 1;	// b == -4 ==	1111 1100
+	cout << b << endl; // -4
+
+	b = 567;	// b ==			0000 0010 0011 0111
+	b = ~b;		// b ==	-568	1111 1101 1100 1000
+	b += 1;		// b == -567	1111 1101 1100 1001
+	cout << b << endl; // -567
+
+	int c = -47; // c ==		1101 0001
+	c = ~c;		// c == 46		0010 1110
+	c += 1;		// c == 47		0010 1111
+	cout << c << endl << endl; // 47
+
+	// |
+	// | == 0 + 1 = 1
+
+	cout << " | " << endl;
+	int d = 34;	// d ==			0010 0010
+	int e = 4;  // e ==			0000 0100
+	d = d | e; // d = 38		0010 0110
+	cout << d << endl << endl;
+
+	// &
+	// & == 0 * 1 = 0
+
+	cout << " & " << endl;
+	int f = 18; // f ==			0001 0010
+	int s = 7;  // s ==			0000 0111
+	f = f & s;  // f =	2		0000 0010
+	cout << f << endl;
+
+	// ^
+
+	cout << " & " << endl;
+	int ab = 6; // ab ==			0000 0110
+	int bc = 3; // bc ==			0000 0011
+	ab = ab ^ bc; // ab = 5			0000 0101
+	cout << ab << endl;
 }
 
 //data type in byte
