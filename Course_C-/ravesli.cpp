@@ -96,6 +96,23 @@ void getHeigtFallingBall()
 }
 
 // bits
+void printBits(int bitDisplayFormat,int x)
+{
+	int i = 0;
+	while (bitDisplayFormat > 0)
+	{
+		int bit = (x & bitDisplayFormat) ? 1 : 0;
+		cout << bit;
+		bitDisplayFormat >>= 1;
+		i = i + 1;
+		if (i==4)
+		{
+			cout << " ";
+			i = 0;
+		}
+	}
+	cout << endl;
+}
 
 void bits()
 {

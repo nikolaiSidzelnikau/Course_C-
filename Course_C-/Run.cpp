@@ -4,5 +4,5 @@ using namespace std;
 
 int main()
 {
-	bits();
+	printBits(0x80,5);
 }
