@@ -99,7 +99,7 @@ void getHeigtFallingBall()
 
 // test 3
 
-void prindColorRgba(int rgba) 
+void prindColorRgba(int rgba)
 {
 	int result = 0;
 	int red = 0;
@@ -138,7 +138,7 @@ void printBits(int bitDisplayFormat, int x)
 	cout << endl;
 }
 
-void printBitsUnsigned(unsigned int bitDisplayFormat,int x)
+void printBitsUnsigned(unsigned int bitDisplayFormat, int x)
 {
 	int i = 0;
 	while (bitDisplayFormat > 0)
@@ -147,7 +147,7 @@ void printBitsUnsigned(unsigned int bitDisplayFormat,int x)
 		cout << bit;
 		bitDisplayFormat >>= 1;
 		i = i + 1;
-		if (i==4)
+		if (i == 4)
 		{
 			cout << " ";
 			i = 0;
@@ -210,6 +210,37 @@ void bits()
 	int bc = 3; // bc ==			0000 0011
 	ab = ab ^ bc; // ab = 5			0000 0101
 	cout << ab << endl;
+}
+
+// test 4
+
+void returnSequence()
+{
+	setlocale(LC_ALL, "rus");
+	int a = 0;
+	int b = 0;
+	cout << "Введите число : ";
+	cin >> a;
+	cout << endl;
+	cout << "Введите большее число : ";
+	cin >> b;
+	cout << endl;
+
+	if (a < b || a == b)
+	{
+		cout << "Меньшее число: " << a << endl;
+		cout << "Большее число: " << b << endl;
+	}
+	else
+	{
+		a = a ^ b;
+		b = a ^ b;
+		a = a ^ b;
+		cout << "Меняем значения местами" << endl;
+		cout << "Меньшее число: " << a << endl;
+		cout << "Большее число: " << b << endl;
+	}
+
 }
 
 //data type in byte

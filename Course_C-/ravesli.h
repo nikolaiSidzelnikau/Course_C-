@@ -11,5 +11,6 @@ void prindColorRgba(int rgba);
 void printBits(int bitDisplayFormat, int x);
 void printBitsUnsigned(unsigned int bitDisplayFormat, int x);
 void bits();
+void returnSequence();
 
 #endif // !IO_H
