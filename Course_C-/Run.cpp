@@ -1,7 +1,11 @@
 #include <iostream>
 using namespace std;
 
-int main()
+extern "C" int additions(int a, int b);
+
+int main(void)
 {
-	cout << "Hello Word!" << endl;
+    int a = additions(4,5);
+    cout << "Hello Word!" << endl;
+    cout << "a + b = " << a << endl;
 }
