@@ -7,7 +7,9 @@ void dataTypeInByte();
 void calculator();
 double setHeightTower();
 void getHeigtFallingBall();
+void prindColorRgba(int rgba);
 void printBits(int bitDisplayFormat, int x);
+void printBitsUnsigned(unsigned int bitDisplayFormat, int x);
 void bits();
 
 #endif // !IO_H

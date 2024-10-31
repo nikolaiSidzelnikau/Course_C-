@@ -96,7 +96,49 @@ void getHeigtFallingBall()
 }
 
 // bits
-void printBits(int bitDisplayFormat,int x)
+
+// test 3
+
+void prindColorRgba(int rgba) 
+{
+	int result = 0;
+	int red = 0;
+	int green = 0;
+	int blue = 0;
+
+	red = rgba >> 16;
+	result = ~(red << 16);
+	rgba = result & rgba;
+
+	green = rgba >> 8;
+	result = ~(green << 8);
+	rgba = result & rgba;
+
+	blue = rgba;
+	cout << "red = " << red << " ";
+	cout << "green = " << green << " ";
+	cout << "blue = " << blue << endl;
+}
+
+void printBits(int bitDisplayFormat, int x)
+{
+	int i = 0;
+	while (bitDisplayFormat > 0)
+	{
+		int bit = (x & bitDisplayFormat) ? 1 : 0;
+		cout << bit;
+		bitDisplayFormat >>= 1;
+		i = i + 1;
+		if (i == 4)
+		{
+			cout << " ";
+			i = 0;
+		}
+	}
+	cout << endl;
+}
+
+void printBitsUnsigned(unsigned int bitDisplayFormat,int x)
 {
 	int i = 0;
 	while (bitDisplayFormat > 0)
