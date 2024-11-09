@@ -3,12 +3,60 @@
    a dword 0
    b dword 0
    c dword 0
+   swapped byte 0
 
    i dword 0
    j dword 0
    x dword 0
+
 .code
 
+; // time 23.1 lenght array 100 000
+bubbleSortAsm proc
+;void bubbleArrayAsm(int array[], int sizeArray) RCX - *array ,RDX - sizeArray
+
+	lea rbx,[rcx]
+do_While:
+	mov ecx,0
+	mov al,0
+	mov swapped,al
+	dec edx
+	cmp edx,0
+je end_While	;jamp a == b
+for1:
+	cmp ecx,edx
+je do_While		;jamp a == b
+;if
+	mov eax,[rbx+rcx*4]
+	inc ecx
+	cmp eax,[rbx + rcx * 4]
+	dec ecx
+jb end_for		;jamp else a < b
+	mov eax,[rbx+rcx*4]
+	inc ecx
+	xor eax,[rbx+rcx*4]
+	xor [rbx+rcx*4],eax
+	dec ecx
+	xor [rbx+rcx*4],eax
+	mov al,0
+	mov al,1
+	mov swapped,al
+;end_if
+
+end_for:
+	inc ecx
+jmp for1
+;if
+	cmp swapped,0
+je end_While	;jamp a == b
+;end_if	
+jmp do_While
+
+end_While:
+ret
+bubbleSortAsm endp
+
+; // time 22.8 lenght array 100 000
 sortArrayAsm proc 
 ; void sortArrayAsm(int array[], int sizeArray) RCX - *array ,RDX - sizeArray
 
@@ -62,5 +110,4 @@ for_I_End:
 ret
 
 sortArrayAsm endp
-
 end
