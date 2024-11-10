@@ -3,7 +3,9 @@
 #include "codewars.h"
 using namespace std;
 
+int digital_root(int n);
+
 int main()
 {
-	cout << repeatStr(4,"j") << endl;
+	cout << digital_root(16) << endl;
 }
