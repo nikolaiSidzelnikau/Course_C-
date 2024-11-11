@@ -1,5 +1,24 @@
 #include <string>
+#include <vector>
 using namespace std;
+
+char findMissingLetter(vector<char>& chars)
+{
+	// 97 - 122 a-z
+	// 65 - 90 A-Z
+	char c = 0;
+	for (int i = 0; i < chars.size(); i++)
+	{
+		if (i < chars.size() - 1)
+		{
+			if (chars[i + 1] - chars[i] == 2)
+			{
+				c = chars[i] + 1;
+			}
+		}
+	}
+	return c;
+}
 
 int digital_root(int n)
 {
